@@ -1,0 +1,33 @@
+[
+    {
+        "Número": "001",
+        "Data": "2024-01-10",
+        "Assunto Geral": "Saúde",
+        "Descrição do Caso": "Solicitação de atendimento médico.",
+        "Como chegou": "E-mail",
+        "Assunto do e-mail": "Consulta médica",
+        "Quem Intermediou": "João Silva",
+        "Quem enviou": "Maria Souza",
+        "Interessado": "Carlos Santos",
+        "Contribuinte": "Sim",
+        "Processo Adm.": "123/2024",
+        "Resolução": "Encaminhado",
+        "Observações": "Atendido rapidamente"
+    },
+    {
+        "Número": "002",
+        "Data": "2024-02-03",
+        "Assunto Geral": "Educação",
+        "Descrição do Caso": "Dúvida sobre matrícula escolar.",
+        "Como chegou": "Telefone",
+        "Assunto do e-mail": "",
+        "Quem Intermediou": "Ana Paula",
+        "Quem enviou": "José Lima",
+        "Interessado": "Joana Almeida",
+        "Contribuinte": "Não",
+        "Processo Adm.": "",
+        "Resolução": "Respondido",
+        "Observações": ""
+    }
+    // Adicione mais conforme sua tabela real!
+]

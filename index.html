@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard de Atendimentos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard de Atendimentos</h1>
+        <p id="statusMsg">Nenhum arquivo carregado.</p>
+    </header>
+
+    <section class="upload-section">
+        <label for="csvFile">Carregar arquivo CSV:</label>
+        <input type="file" id="csvFile" accept=".csv" />
+    </section>
+
+    <section class="filter-section">
+        <label for="startDate">De:</label>
+        <input type="date" id="startDate">
+        <label for="endDate">Até:</label>
+        <input type="date" id="endDate">
+        <button id="filterBtn">Filtrar Período</button>
+    </section>
+
+    <section id="resumoSection" style="display:none;">
+        <div class="cards">
+            <div class="card">
+                <span class="card-title">Total de Atendimentos</span>
+                <span class="card-value" id="totalAtendimentos">0</span>
+            </div>
+            <div class="card">
+                <span class="card-title">Linhas Carregadas</span>
+                <span class="card-value" id="linhasCarregadas">0</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard">
+        <div class="chart-box">
+            <canvas id="assuntoChart"></canvas>
+            <div class="chart-desc">
+                <b>Distribuição dos Atendimentos por Assunto Geral</b><br>
+                Este gráfico mostra a quantidade de atendimentos agrupados por tipo de assunto.
+            </div>
+        </div>
+        <div class="chart-box">
+            <canvas id="comoChegouChart"></canvas>
+            <div class="chart-desc">
+                <b>Como os Atendimentos Chegaram</b><br>
+                Visualize os principais canais de origem dos atendimentos recebidos.
+            </div>
+        </div>
+        <div class="chart-box">
+            <canvas id="quemIntermediouChart"></canvas>
+            <div class="chart-desc">
+                <b>Distribuição por Quem Intermediou</b><br>
+                Veja quem intermediou os atendimentos e suas respectivas frequências.
+            </div>
+        </div>
+    </section>
+
+    <section id="tabelaSection" style="display:none;">
+        <h2>Tabela de Atendimentos</h2>
+        <div class="table-container">
+            <table id="dataTable">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Bibliotecas -->
+    <script src="libs/chart.js"></script>
+    <script src="libs/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
